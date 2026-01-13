@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: StatDataSO_Player
   m_EditorClassIdentifier: Assembly-CSharp::StatDataSO
   <MaxHealth>k__BackingField: 1000
-  <AttackDamage>k__BackingField: 100
+  <AttackDamage>k__BackingField: 1
   <AttackRange>k__BackingField: 10
   <AttackCooldown>k__BackingField: 0.1
   <MoveSpeed>k__BackingField: 3

@@ -77,7 +77,10 @@ public class WaveManager : MonoBehaviour
 		{
 			waveIndex = 0;
 			nightIndex++;
-		}
+
+            ClearPastUIs();
+
+        }
 		else
 		{
 			float interval = waveDataSOs[nightIndex].GetWaveInterval(waveIndex);

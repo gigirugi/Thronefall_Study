@@ -68,7 +68,7 @@ Transform:
   - {fileID: 1559381201480565601}
   - {fileID: 820776048204754473}
   - {fileID: 355320445868567750}
-  - {fileID: 6593385468025713936}
+  - {fileID: 1042182402459766048}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!195 &7813346146843994346
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Combat
   <StatData>k__BackingField: {fileID: 11400000, guid: 977cd4783b3870f41b8e40e027d9040b, type: 2}
   <FirePoint>k__BackingField: {fileID: 820776048204754473}
-  hpCanvas: {fileID: 6687566394021892018}
+  hpCanvas: {fileID: 664835416970622850}
   slashPrefab: {fileID: 2620495799340493424}
 --- !u!136 &5092092734893202609
 CapsuleCollider:
@@ -257,7 +257,7 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1001 &5042092209680081327
+--- !u!1001 &1157396927027665311
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -311,19 +311,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2195914940112164031, guid: 6f34adfbfee13d04fbf4b3167d91372b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8535535
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2195914940112164031, guid: 6f34adfbfee13d04fbf4b3167d91372b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.35355338
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2195914940112164031, guid: 6f34adfbfee13d04fbf4b3167d91372b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.35355338
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2195914940112164031, guid: 6f34adfbfee13d04fbf4b3167d91372b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.1464466
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2195914940112164031, guid: 6f34adfbfee13d04fbf4b3167d91372b, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -331,19 +331,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2195914940112164031, guid: 6f34adfbfee13d04fbf4b3167d91372b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 2.2
+      value: 2.41
       objectReference: {fileID: 0}
     - target: {fileID: 2195914940112164031, guid: 6f34adfbfee13d04fbf4b3167d91372b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 45
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2195914940112164031, guid: 6f34adfbfee13d04fbf4b3167d91372b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -45
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2195914940112164031, guid: 6f34adfbfee13d04fbf4b3167d91372b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2673531840007590459, guid: 6f34adfbfee13d04fbf4b3167d91372b, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4574202001834995595, guid: 6f34adfbfee13d04fbf4b3167d91372b, type: 3}
       propertyPath: m_Name
@@ -362,15 +366,10 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f34adfbfee13d04fbf4b3167d91372b, type: 3}
---- !u!224 &6593385468025713936 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 2195914940112164031, guid: 6f34adfbfee13d04fbf4b3167d91372b, type: 3}
-  m_PrefabInstance: {fileID: 5042092209680081327}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6687566394021892018 stripped
+--- !u!114 &664835416970622850 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1816672577200664093, guid: 6f34adfbfee13d04fbf4b3167d91372b, type: 3}
-  m_PrefabInstance: {fileID: 5042092209680081327}
+  m_PrefabInstance: {fileID: 1157396927027665311}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -378,6 +377,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 955447adc0cac34449fd462c4576fd25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HPCanvas
+--- !u!224 &1042182402459766048 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2195914940112164031, guid: 6f34adfbfee13d04fbf4b3167d91372b, type: 3}
+  m_PrefabInstance: {fileID: 1157396927027665311}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7943188191765484903
 PrefabInstance:
   m_ObjectHideFlags: 0
