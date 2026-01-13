@@ -8,8 +8,10 @@ public class Combat : MonoBehaviour
 	public Combat TargetCombat { get; private set; }
 	float followTimer = 0f;
 
-	int currentHealth;
-	float attackCooldownTimer = 0f;
+
+    [SerializeField] HPCanvas hpCanvas;
+    int currentHealth;
+    float attackCooldownTimer = 0f;
 	Collider[] results = new Collider[50];
 	Collider selfCollider;
 
@@ -163,7 +165,10 @@ public class Combat : MonoBehaviour
 
 		currentHealth -= damage;
 
-		if (!IsInRange())
+        if (damage > 0 && hpCanvas)
+            hpCanvas.ShowSlider((float)currentHealth / StatData.MaxHealth);
+
+        if (!IsInRange())
 			TargetCombat = combat;
 
 		if (currentHealth <= 0)

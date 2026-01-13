@@ -15,10 +15,11 @@ MonoBehaviour:
   <MaxHealth>k__BackingField: 1000
   <AttackDamage>k__BackingField: 100
   <AttackRange>k__BackingField: 10
-  <AttackCooldown>k__BackingField: 0.2
+  <AttackCooldown>k__BackingField: 0.1
   <MoveSpeed>k__BackingField: 3
-  <AttackTypes>k__BackingField: 1
-  <BodyType>k__BackingField: 1
+  <AttackTypes>k__BackingField: 2
+  <WeaknessTypes>k__BackingField: 0
+  <BodyType>k__BackingField: 0
   <IsEnemy>k__BackingField: 0
   <BodySize>k__BackingField: 0.5
   <FollowTime>k__BackingField: 5
