@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27e320f72f5c96c4793e7d0c1fed91e9, type: 3}
+  m_Name: StatDataSO_Range
+  m_EditorClassIdentifier: Assembly-CSharp::StatDataSO
+  <MaxHealth>k__BackingField: 100
+  <AttackDamage>k__BackingField: 10
+  <AttackRange>k__BackingField: 7
+  <AttackCooldown>k__BackingField: 1
+  <MoveSpeed>k__BackingField: 3
+  <AttackTypes>k__BackingField: -6
+  <WeaknessTypes>k__BackingField: 0
+  <BodyType>k__BackingField: 1
+  <IsEnemy>k__BackingField: 1
+  <BodySize>k__BackingField: 0.5
+  <FollowTime>k__BackingField: 5
