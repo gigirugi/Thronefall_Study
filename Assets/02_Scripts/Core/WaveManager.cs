@@ -27,7 +27,8 @@ public class WaveManager : MonoBehaviour
 			Instance = this;
 		else
 			Destroy(gameObject);
-	}
+        InitInfoUI(0);
+    }
 
 	private void OnEnable()
 	{
