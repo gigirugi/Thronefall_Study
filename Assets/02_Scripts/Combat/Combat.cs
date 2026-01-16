@@ -165,8 +165,17 @@ public class Combat : MonoBehaviour
 
 		currentHealth -= damage;
 
-        if (damage > 0 && hpCanvas)
-            hpCanvas.ShowSlider((float)currentHealth / StatData.MaxHealth);
+        if (damage > 0)
+        {
+            if (hpCanvas)
+                hpCanvas.ShowSlider((float)currentHealth / StatData.MaxHealth);
+
+            var hitEffect = HitEffectPool.Instance.GetPooledObject();
+            Vector3 direction = (combat.transform.position - transform.position).normalized;
+            hitEffect.transform.position = FirePoint.position + 0.5f * StatData.BodySize * direction;
+            hitEffect.transform.forward = direction;
+            hitEffect.Play();
+        }
 
         if (!IsInRange())
 			TargetCombat = combat;

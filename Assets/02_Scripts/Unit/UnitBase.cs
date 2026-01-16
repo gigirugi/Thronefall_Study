@@ -57,4 +57,13 @@ public abstract class UnitBase : MonoBehaviour
 	{
 
 	}
+
+    #region Animation Event
+    public void PlayFootstepEffects()
+    {
+        var footstepEffect = FootstepEffectPool.Instance.GetPooledObject();
+        footstepEffect.transform.position = transform.position;
+        footstepEffect.Play();
+    }
+    #endregion
 }
