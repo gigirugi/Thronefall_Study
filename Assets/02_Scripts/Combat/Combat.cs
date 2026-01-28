@@ -8,11 +8,12 @@ public class Combat : MonoBehaviour
 	public Combat TargetCombat { get; private set; }
 	float followTimer = 0f;
 
+    private const float SLASH_DISPLAY_DURATION = 0.2f;
 
     [SerializeField] HPCanvas hpCanvas;
     int currentHealth;
     float attackCooldownTimer = 0f;
-	Collider[] results = new Collider[50];
+	Collider[] overlapResults = new Collider[50];
 	Collider selfCollider;
 
 	[SerializeField] GameObject slashPrefab;
@@ -95,18 +96,18 @@ public class Combat : MonoBehaviour
 
 	private Combat GetNearestTarget()
 	{
-		int length = Physics.OverlapSphereNonAlloc(transform.position, StatData.AttackRange, results);
+		int length = Physics.OverlapSphereNonAlloc(transform.position, StatData.AttackRange, overlapResults);
 
 		Combat nearest = null;
 		float bestSqr = float.MaxValue;
 
 		for (int i = 0; i < length; i++)
 		{
-			if (results[i] == selfCollider) continue;
+			if (overlapResults[i] == selfCollider) continue;
 
-			if (results[i].TryGetComponent(out Combat combat))
+			if (overlapResults[i].TryGetComponent(out Combat combat))
 			{
-				float sqr = (results[i].ClosestPoint(transform.position) - transform.position).sqrMagnitude;
+				float sqr = (overlapResults[i].ClosestPoint(transform.position) - transform.position).sqrMagnitude;
 				if (CanAttack(combat) && sqr < bestSqr)
 				{
 					bestSqr = sqr;
@@ -132,7 +133,8 @@ public class Combat : MonoBehaviour
 		if (slashPrefab.transform.parent == transform)
 			slashPrefab.transform.SetParent(null);
 
-		Invoke(nameof(DisableSlash), 0.2f);
+        CancelInvoke(nameof(DisableSlash));
+        Invoke(nameof(DisableSlash), SLASH_DISPLAY_DURATION);
 	}
 
 	void DisableSlash()

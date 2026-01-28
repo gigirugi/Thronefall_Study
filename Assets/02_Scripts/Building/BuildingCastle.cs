@@ -5,9 +5,10 @@ public class BuildingCastle : BuildingBase
 	[SerializeField] BuildingSpot[] buildingSpots;
 	protected override void Combat_OnDie()
 	{
-		base.Combat_OnDie();
-		Debug.Log("Game Over!");
-	}
+        if (isDestroyed) return;
+        base.Combat_OnDie();
+        GameManager.Instance.OnGameOver?.Invoke();
+    }
 	protected override void Upgrade(int index)
 	{
 		base.Upgrade(index);

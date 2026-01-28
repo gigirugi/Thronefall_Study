@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27e320f72f5c96c4793e7d0c1fed91e9, type: 3}
   m_Name: StatDataSO_Castle
   m_EditorClassIdentifier: Assembly-CSharp::StatDataSO
-  <MaxHealth>k__BackingField: 500
+  <MaxHealth>k__BackingField: 100
   <AttackDamage>k__BackingField: 10
   <AttackRange>k__BackingField: 15
   <AttackCooldown>k__BackingField: 1

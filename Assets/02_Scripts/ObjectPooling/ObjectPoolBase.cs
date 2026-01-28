@@ -6,8 +6,8 @@ public abstract class ObjectPoolBase<T> : MonoBehaviour where T : MonoBehaviour
 	[SerializeField] int poolSize = 20;
 	[SerializeField] T poolingPrefab;
 	Queue<T> objectPool = new Queue<T>();
-	private void Start()
-	{
+    protected virtual void Awake()
+    {
 		InitializePool();
 	}
 
@@ -35,7 +35,9 @@ public abstract class ObjectPoolBase<T> : MonoBehaviour where T : MonoBehaviour
 	}
 	public void ReturnPooledObject(T returnedObject)
 	{
-		returnedObject.gameObject.SetActive(false);
+        if (!returnedObject) return;
+
+        returnedObject.gameObject.SetActive(false);
 		objectPool.Enqueue(returnedObject);
 	}
 }
